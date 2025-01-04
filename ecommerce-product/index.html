@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>E-commerce product page</title>
+  <!-- styling css  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- googl foonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <!-- Toggle Button for Small Screens -->
+        <button id="menu-toggler" aria-label="Toggle Menu">
+
+          <svg id="open-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 20H0v-2h24v2zm0-7H0v-2h24v2zm0-7H0V4h24v2z" fill="#333" />
+          </svg>
+
+
+          <svg id="close-icon" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#69707D" fill-rule="evenodd" />
+          </svg>
+
+        </button>
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="menu" id="menu">
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#" class="active">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Cart and Avatar -->
+        <div class="cart">
+          <a href="#" class="cart-icon">
+            <img src="images/icon-cart.svg" alt="Cart">
+            <span id="cart-count">0</span>
+          </a>
+
+          <a href="#" class="avatar">
+            <img src="images/image-avatar.png" alt="Profile">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="cart-box">
+    <h2>Cart</h2>
+    <ul id="cart" class="list-group">
+      <!-- Cart items dynamically added here by JavaScript -->
+    </ul>
+    <button id="checkout-btn" type="submit">Checkout</button>
+  </section>
+
+  <main>
+
+    <article class="product">
+      <div class="container-products">
+        <div class="img-products">
+          <div class="img-prouduct">
+            <img class="main-image" src="images/image-product-1.jpg" alt="Product Image">
+            <ul class="changeIcons">
+              <li><img class="perv" src="images/icon-previous.svg" alt="icon previous"></li>
+              <li><img class="next" src="images/icon-next.svg" alt="icon next" width="25"></li>
+            </ul>
+          </div>
+          <div class="img-thumb">
+            <ul class="thumbnail-list">
+              <li><img class="active" src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1"></li>
+              <li><img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2"></li>
+              <li><img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3"></li>
+              <li><img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="details-pro">
+          <div class="title">
+            <span>Sneaker Company</span>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <div>
+              <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                sole,
+                they’ll withstand everything the weather can offer.</p>
+            </div>
+            <div class="price-box">
+              <div class="price">
+                <strong id="price">$125.00</strong>
+                <span>50%</span><br>
+              </div>
+              <del>$250.00</del>
+            </div>
+            <div class="quantity">
+
+
+              <div class="btnsIncr">
+                <button id="decremnt" aria-label="Decrease quantity">-</button>
+                <span id="quantity">0</span>
+                <button id="increment" aria-label="Increase quantity">+</button>
+              </div>
+
+              <a href="#" class="add-to-cart"> <svg width="22" height="19" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                    fill="#fff" fill-rule="nonzero" />
+                </svg> Add to Cart
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- start full screen sliders -->
+    <div id="img_pro">
+      <div class="container bigcard">
+        <div class="ico">
+          <img src="images/icon-close.svg" alt="close icone">
+        </div>
+        
+        <div class="img-prouduct-fullScreen">
+          <img class="main-image" src="images/image-product-1.jpg" alt="Product Image">
+          <ul class="changeImg">
+            <li><img class="perv" src="images/icon-previous.svg" alt="icon previous"></li>
+            <li><img class="next" src="images/icon-next.svg" alt="icon next" width="25"></li>
+          </ul>
+        </div>
+
+        <div class="img-thumb">
+          <ul class="thumbnail-lists">
+            <li><img class="active" src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1"></li>
+            <li><img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2"></li>
+            <li><img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3"></li>
+            <li><img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4"></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+  </main>
+
+  <!-- <div class="attribution" style="position: absolute; bottom: 0;left: 40%;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script defer src="js/cart.js"></script>
+  <script defer src="js/index.js"></script>
+</body>
+
+</html>
